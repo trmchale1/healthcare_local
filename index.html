@@ -66,7 +66,7 @@
 <body>
 
 <div id="tooltip"></div>
-<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="https://d3js.org/d3.v4.min.js"></script>
 <svg width="960" height="600" id="statesvg"></svg>
 <script>
 
@@ -151,6 +151,7 @@
 
 /* <--- end uStates code -----> */
 
+
 function tooltipHtml(n, d){ /* function to create html content string in tooltip div. */
     return "<h4>"+n+"</h4><table>"+
       "<tr><td>Low</td><td>"+(d.low)+"</td></tr>"+
@@ -158,22 +159,6 @@ function tooltipHtml(n, d){ /* function to create html content string in tooltip
       "<tr><td>High</td><td>"+(d.high)+"</td></tr>"+
       "</table>";
   }
-  
-/* <-- write code for states.csv here ---> */
-d3.text("states.csv", function(data) {
-console.log("Hello World");
-//                var parsedCSV = d3.csv.parseRows(data);
-//                var container = d3.select("body")
-//                .append("table")
-//                .selectAll("tr")
-//                .data(parsedCSV).enter()
- //               .append("tr")
- //               .selectAll("td")
- //               .data(function(d) { return d; }).enter()
- //               .append("td")
- //               .text(function(d) { return d; });
-  });
-
 
   var sampleData ={}; /* Sample random data. */ 
   ["HI", "AK", "FL", "SC", "GA", "AL", "NC", "TN", "RI", "CT", "MA",
